@@ -180,13 +180,17 @@ class Blackjack (object):
         else:
           print "Player 1 ties"
     print "Current Chips: " + str(currentChips)
+    return currentChips
 
 def main ():
   currentChips = 100
   print "You currently have " + str(currentChips) + " chips"
-  while True:
+  while currentChips > 0:
     bet = raw_input ('How many chips would you like to bet? ')
     game = Blackjack ()
-    game.play(currentChips, int(bet))
+    currentChips = game.play(currentChips, int(bet))
+
+
+
 
 main()

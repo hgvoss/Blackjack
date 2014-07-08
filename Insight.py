@@ -106,8 +106,7 @@ class Dealer (Player):
     Player.__init__ (self, cards)
     self.show_one_card = True
 
-  # Over-load the hit function() in the parent class
-  # Add cards while points < 17, then allow all to be shown
+  # Dealer hits until has at least 17 points
   def hit (self, deck):
     self.show_one_card = False
     while self.getPoints() < 17:
@@ -155,7 +154,6 @@ class Blackjack (object):
     # Dealer's turn to hit
     self.dealer.hit (self.deck)
     dealerPoints = self.dealer.getPoints()
-    print
     print ('Dealer: ' + str(self.dealer))
     print
 

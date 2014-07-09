@@ -138,6 +138,7 @@ class Blackjack (object):
     print ('Dealer: ' + str(self.dealer))
 
     '''
+    SPLITTING
     if self.Hand[0].cards[0].rank == self.Hand[0].cards[1].rank:
     split = raw_input (' Would you like to split? [y / n]: ')
     if split in ('y', 'Y'): 
@@ -148,6 +149,10 @@ class Blackjack (object):
         print self.Hand1[0]
     '''
 
+    # Give player the option to Double Down
+    dd = raw_input (' Would you like to double down? [y / n]: ')
+    if dd in ('y', 'Y'):
+      bet = bet * 2
 
     # Each player hits until he says no
     playerPoints = []

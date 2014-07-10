@@ -137,18 +137,6 @@ class Blackjack (object):
     # Print the cards that the dealer has
     print ('Dealer: ' + str(self.dealer))
 
-    '''
-    SPLITTING
-    if self.Hand[0].cards[0].rank == self.Hand[0].cards[1].rank:
-    split = raw_input (' Would you like to split? [y / n]: ')
-    if split in ('y', 'Y'): 
-        self.Hand1 = []
-        self.Hand2 = []
-        #self.Hand1.append(self.Hand[0].cards[0])
-        self.Hand1.append(Player([self.Hand[0].cards[0], self.deck.deal()])
-        print self.Hand1[0]
-    '''
-
     # Give player the option to Double Down
     dd = raw_input (' Would you like to double down? [y / n]: ')
     if dd in ('y', 'Y'):
@@ -207,8 +195,5 @@ def main ():
       bet = raw_input('How many chips would you like to bet? ')
     game = Blackjack ()
     currentChips = game.play(currentChips, int(bet))
-
-
-
 
 main()
